@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_margin="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="목록"
+            android:textSize="17sp"></Button>
+        <Button
+            android:id="@+id/btnModify"
+            android:layout_margin="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="수정"
+            android:textSize="17sp"></Button>
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_margin="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="삭제"
+            android:textSize="17sp"></Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="학번"
+            android:textSize="25sp"></TextView>
+        <EditText
+            android:id="@+id/edtSno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"></EditText>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="이름"
+                android:textSize="25sp"></TextView>
+            <EditText
+                android:id="@+id/edtSname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"></EditText>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="학년"
+            android:textSize="25sp"></TextView>
+        <EditText
+            android:id="@+id/edtSyear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"></EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="성별"
+            android:textSize="25sp"></TextView>
+    </LinearLayout>
+
+        <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/rdoGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rdoMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text="남자"
+                        android:textSize="20sp"></RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/rdoFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text="여자"
+                        android:textSize="20sp"></RadioButton>
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="전공"
+            android:textSize="25sp"></TextView>
+        <EditText
+            android:id="@+id/edtMajor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"></EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="점수"
+            android:textSize="25sp"></TextView>
+        <EditText
+            android:id="@+id/edtScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"></EditText>
+    </LinearLayout>
+
+</LinearLayout>
