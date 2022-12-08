@@ -1,6 +1,7 @@
 package com.kh.ui_exam;
 
 import android.database.Cursor;
+import android.database.sqlite.SQLiteCursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.util.Log;
@@ -36,6 +37,23 @@ public class StudentDao {
             db.close();
         }
         return false;
+    }
+
+    // showDetail
+    public StudentVo showDetail(SqlHelper helper, String sno) {
+        SQLiteDatabase db = helper.getReadableDatabase();
+        String sql = "select * from tbl_student where sno = ?";
+        Cursor cursor = db.rawQuery(sql, new String[]{sno});
+        cursor.moveToNext();
+        String sname = cursor.getString(1);
+        int syear = cursor.getInt(2);
+        String gender = cursor.getString(3);
+        String major = cursor.getString(4);
+        int score = cursor.getInt(5);
+        StudentVo studentVo = new StudentVo(sno, sname, syear, gender, major, score);
+        db.close();
+        return studentVo;
+
     }
 
     // showList

@@ -15,12 +15,13 @@ public class SqlHelper extends SQLiteOpenHelper {
     @Override
     // table 생성
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        // varchar2 적용이 되지 않는다. -> varchar사용
         String sql = "create table tbl_student(" +
-                "        sno varchar2(8) primary key," +
-                "        sname varchar2(20) not null," +
+                "        sno varchar(8) primary key," +
+                "        sname varchar(20) not null," +
                 "        syear number(1) not null," +
-                "        gender varchar2(1) check(gender in('M','F'))," +
-                "        major varchar2(20) not null," +
+                "        gender varchar(1) check(gender in('M','F'))," +
+                "        major varchar(20) not null," +
                 "        score number(3) default 0 check(score between 0 and 100))";
         sqLiteDatabase.execSQL(sql);
     }
